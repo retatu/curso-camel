@@ -7,13 +7,13 @@ import org.apache.camel.dataformat.bindy.csv.BindyCsvDataFormat;
 import org.apache.camel.component.jacksonxml.JacksonXMLDataFormat;
 import org.apache.camel.spi.DataFormat;
 
-public class UnMarshalCSV extends RouteBuilder {
+public class UnMarshal extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         DataFormat dataFormat = 
-//                new BindyCsvDataFormat(Curso.class);
+                new BindyCsvDataFormat(Curso.class);
 //                new GsonDataFormat(Curso.class);
-                new JacksonXMLDataFormat(Curso.class);
+//                new JacksonXMLDataFormat(Curso.class);
         
         from("file:data/conversaodedados/unmarshal/csv/input?noop=true")
                 .log("A mensagem é: ${body}")
