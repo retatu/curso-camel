@@ -11,11 +11,9 @@ public class UnMarshalCSV extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         DataFormat dataFormat = 
-                new BindyCsvDataFormat(Curso.class);
-//        DataFormat dataFormat = 
+//                new BindyCsvDataFormat(Curso.class);
 //                new GsonDataFormat(Curso.class);
-//        DataFormat dataFormat = 
-//                new JacksonXMLDataFormat(Curso.class);
+                new JacksonXMLDataFormat(Curso.class);
         
         from("file:data/conversaodedados/unmarshal/csv/input?noop=true")
                 .log("A mensagem é: ${body}")
