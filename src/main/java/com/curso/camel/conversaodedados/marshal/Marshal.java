@@ -6,7 +6,7 @@
 package com.curso.camel.conversaodedados.marshal;
 
 import com.curso.camel.conversaodedados.marshal.process.MyProcessor;
-import com.curso.camel.conversaodedados.Curso;
+import com.curso.camel.Curso;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.gson.GsonDataFormat;
 import org.apache.camel.component.jacksonxml.JacksonXMLDataFormat;
@@ -18,7 +18,6 @@ import org.apache.camel.spi.DataFormat;
  * @author Pichau
  */
 public class Marshal extends RouteBuilder {
-
     @Override
     public void configure() throws Exception {
         DataFormat dataFormat =
@@ -26,7 +25,7 @@ public class Marshal extends RouteBuilder {
 //                 new GsonDataFormat(Curso.class);
                 new JacksonXMLDataFormat(Curso.class);
 
-        from("timer:myTimer?period=16s")
+        from("timer:?period=16s")
                 .process(new MyProcessor())
                 .log("A mensagem é: ${body}")
                 .marshal(dataFormat)

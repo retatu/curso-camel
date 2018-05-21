@@ -5,7 +5,7 @@
  */
 package com.curso.camel.conversaodedados.marshal.process;
 
-import com.curso.camel.conversaodedados.Curso;
+import com.curso.camel.Curso;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 

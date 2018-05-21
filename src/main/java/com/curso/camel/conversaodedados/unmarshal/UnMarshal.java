@@ -1,6 +1,6 @@
 package com.curso.camel.conversaodedados.unmarshal;
 
-import com.curso.camel.conversaodedados.Curso;
+import com.curso.camel.Curso;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.gson.GsonDataFormat;
 import org.apache.camel.dataformat.bindy.csv.BindyCsvDataFormat;
