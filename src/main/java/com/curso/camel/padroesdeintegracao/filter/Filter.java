@@ -12,14 +12,15 @@ public class Filter extends RouteBuilder{
     public void configure() throws Exception {
         DataFormat dataFormat = new BindyCsvDataFormat(Curso.class);
         
-        from("file:data/padroesdeintegracao/csv/input?noop=true")
+        from("file:data/padroesdeintegracao/filter/csv/input?noop=true")
             .unmarshal(dataFormat)
                 .filter().method(new MeuBean(), "verificaHorasDoCurso")
                     .log("Aceita o Filter, body: ${body}")
                     .log("Verificando Headers...")
                 .filter(header("CamelFileName").endsWith(".csv"))
                     .log("Aceita o Filter, headers: ${headers}")
-        .to("file:data/padroesdeintegracao/csv/output");
+            .marshal(dataFormat)
+        .to("file:data/padroesdeintegracao/filter/csv/output");
         
     }
     
