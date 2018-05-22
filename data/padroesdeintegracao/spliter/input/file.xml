@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curso>
+    <ministrante>Matheus Rehbein</ministrante>
+    <assunto>Apache Camel</assunto>
+    <horas>3</horas>
+    <local>Unijui</local>
+</curso>

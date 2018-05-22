@@ -1,0 +1,3 @@
+Curso de Apache Camel na semana academica do curso de Ciência da Computação da UNIJUI.
+
+Minstrado por Matheus Rehbein.
