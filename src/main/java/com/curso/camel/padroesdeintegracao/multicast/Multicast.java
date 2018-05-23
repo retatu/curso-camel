@@ -8,7 +8,7 @@ public class Multicast extends RouteBuilder{
     public void configure() throws Exception {       
         from("file:data/padroesdeintegracao/multicast/"
             + "input?noop=true")
-            .multicast()//.parallelProcessing()
+            .multicast()
                 .to("seda:proxima", "seda:analisadora");        
         from("seda:proxima")
             .log("Fazendo alguma coisa...")
