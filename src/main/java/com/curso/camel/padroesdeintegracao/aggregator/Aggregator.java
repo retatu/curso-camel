@@ -6,14 +6,14 @@ import org.apache.camel.builder.RouteBuilder;
 public class Aggregator extends RouteBuilder{
     @Override
     public void configure() throws Exception {
-        int count = 0;
         from("file:data/padroesdeintegracao/aggregator/csv/"
             + "input?noop=true")
                 .setHeader("aggregatorId", simple("csv"))
                 .log("Os headers são ${headers}")
                 .convertBodyTo(String.class)
                     .aggregate(header("aggregatorId"), 
-                    new SimpleAggregator()).completionSize(2).completionTimeout(2000)
+                    new SimpleAggregator()).completionSize(2)
+                    .completionTimeout(2000)
         .to("file:data/padroesdeintegracao/aggregator/output/csv");
     }
 }

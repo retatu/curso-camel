@@ -16,5 +16,4 @@ public class SimpleAggregator implements AggregationStrategy{
         }
         return newExchange;   
     }
-
 }
