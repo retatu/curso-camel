@@ -1,0 +1,6 @@
+  {
+    "nome": "Matheus",
+    "idade": 22,
+    "rg": 12332,
+    "semestre": 6
+  }

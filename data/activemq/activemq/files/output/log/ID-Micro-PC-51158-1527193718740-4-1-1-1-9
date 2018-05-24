@@ -1,0 +1,3 @@
+[main] INFO org.apache.camel.impl.DefaultCamelContext - Route: route1 started and consuming from: activemq://queue:minhaFila
+[main] INFO org.apache.camel.impl.DefaultCamelContext - Route: route2 started and consuming from: seda://csv
+[main] INFO org.apache.camel.impl.DefaultCamelContext - Route: route3 started and consuming from: seda://agrega

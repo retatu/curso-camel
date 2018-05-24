@@ -1,0 +1,2 @@
+nome,idade,rg,semestre
+Joao,17,12812,2

@@ -1,0 +1,6 @@
+    <aluno>
+        <nome>Pedro</nome>
+        <idade>18</idade>
+        <rg>19332</rg>
+        <semestre>2</semestre>
+    </aluno>
