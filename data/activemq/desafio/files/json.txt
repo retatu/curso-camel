@@ -1,0 +1,20 @@
+[
+  {
+    "nome": "Matheus",
+    "idade": 22,
+    "rg": 12332,
+    "semestre": 6
+  },
+  {
+    "nome": "João",
+    "idade": 18,
+    "rg": 33213,
+    "semestre": 2
+  },
+  {
+    "nome": "Pedro",
+    "idade": 17,
+    "rg": 32134,
+    "semestre": 2
+  }
+]

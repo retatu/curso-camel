@@ -1,0 +1,20 @@
+<ALUNOS>
+    <ALUNO>
+        <NOME>Matheus</NOME>
+        <IDADE>22</IDADE>
+        <RG>12332</RG>
+        <SEMESTRE>6</SEMESTRE>
+    </ALUNO>
+    <ALUNO>
+        <NOME>João</NOME>
+        <IDADE>18</IDADE>
+        <RG>33213</RG>
+        <SEMESTRE>2</SEMESTRE>
+    </ALUNO>
+    <ALUNO>
+        <NOME>Pedro</NOME>
+        <IDADE>17</IDADE>
+        <RG>32134</RG>
+        <SEMESTRE>2</SEMESTRE>
+    </ALUNO>
+</ALUNOS>
