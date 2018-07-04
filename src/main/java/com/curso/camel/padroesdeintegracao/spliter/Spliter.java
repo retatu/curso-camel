@@ -14,6 +14,6 @@ public class Spliter extends RouteBuilder{
                         //.split().tokenizeXML("ministrante")
                             .log("Após 'splitar', o body é ${body}"
                                 + " e os headers são ${headers}")
-        .to("file:data/padroesdeintegracao/spliter/output/csv");
+        .to("file:data/padroesdeintegracao/spliter/output/csv?fileExist=Append");
     } 
 }

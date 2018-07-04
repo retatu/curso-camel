@@ -1,4 +1,2 @@
 nome,idade,rg,semestre
-Matheus,22,12332,6
-João,18,33213,2
-Pedro,17,32134,2
+Joao,17,12812,2

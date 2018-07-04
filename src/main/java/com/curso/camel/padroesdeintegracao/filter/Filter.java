@@ -17,7 +17,7 @@ public class Filter extends RouteBuilder{
                 .filter().method(new MeuBean(), "verificaHorasDoCurso")
                     .log("Aceita o Filter, body: ${body}")
                     .log("Verificando Headers...")
-                .filter(header("CamelFileName").endsWith(".csv"))
+                .filter(header("CamelFileName").endsWith(".xml"))
                     .log("Aceita o Filter, headers: ${headers}")
             .marshal(dataFormat)
         .to("file:data/padroesdeintegracao/filter/csv/output");

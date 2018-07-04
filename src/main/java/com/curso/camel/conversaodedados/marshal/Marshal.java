@@ -22,15 +22,15 @@ public class Marshal extends RouteBuilder {
     public void configure() throws Exception {
         DataFormat dataFormat =
 //                 new BindyCsvDataFormat(Curso.class);
-//                 new GsonDataFormat(Curso.class);
-                new JacksonXMLDataFormat(Curso.class);
+                 new GsonDataFormat(Curso.class);
+//                new JacksonXMLDataFormat(Curso.class);
 
         from("timer:?period=16s")
                 .process(new MyProcessor())
                 .log("A mensagem é: ${body}")
                 .marshal(dataFormat)
                 .log("Depois do marshal a mensagem é: ${body}")
-                .to("file:data/conversaodedados/marshal/xml/output?"
+                .to("file:data/conversaodedados/marshal/json/output?"
                         + "fileName=file.xml");
     }
 }

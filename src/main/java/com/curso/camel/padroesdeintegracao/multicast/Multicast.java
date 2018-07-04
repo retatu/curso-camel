@@ -10,7 +10,7 @@ public class Multicast extends RouteBuilder{
             + "input?noop=true")
             .multicast()
                 .to("seda:proxima", "seda:analisadora");        
-        from("seda:proxima")
+        from("seda:proxima?concurrentConsumers=3")
             .log("Fazendo alguma coisa...")
                 .bean(new MeuBean(), "delay")
                     .to("file:data/padroesdeintegracao/"
